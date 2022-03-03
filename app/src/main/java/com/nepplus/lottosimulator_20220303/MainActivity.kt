@@ -40,10 +40,12 @@ class MainActivity : AppCompatActivity() {
         }
 //        ArrayList는 목록을 계속 누적 가능.
 //        당첨번호 뽑기 전에, 기존의 당첨번호는 전부 삭제하고 다시 뽑자
-        mWinNumberList.clear()
+       // mWinNumberList.clear()
 
-//        만들어진 당첨번호 6개를 -> 텍스트뷰에 표현
-        Log.d("당청번호",mWinNumberList.toString())
+//        만들어진 당첨번호 6개를 -> 작은수 ~ 큰수로 텍스트뷰에 표현
+        mWinNumberList.sort() //자바로 직접 짜던 로직을 > 객체지향의 특성, 만들어져 있는 기능 활용으로 대체
+        Log.d("당첨번호", mWinNumberList.toString())
+        mWinNumberList.clear()
         for (winNum in mWinNumberList){
 
         }
